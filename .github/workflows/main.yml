@@ -1,0 +1,17 @@
+name: Send description
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Send description
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker Hub Description
+      uses: peter-evans/dockerhub-description@v3
+      with:
+        username: 151013160191
+        password: ${{ secrets.DOCKER_PWD }}
+        repository: 151013160191/test-trivy
+        enable-url-completion: false
