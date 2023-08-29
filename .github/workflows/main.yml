@@ -14,4 +14,3 @@ jobs:
         username: 151013160191
         password: ${{ secrets.DOCKER_PWD }}
         repository: 151013160191/test-trivy
-        enable-url-completion: false
