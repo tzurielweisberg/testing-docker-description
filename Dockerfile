@@ -11,9 +11,9 @@ RUN apk update &&\
     make install
 
 # fix vulns in libcrypto3 and libssl3
-RUN apk update &&\
-    apk upgrade &&\
-    apk add libcrypto3=3.0.12-r1 libssl3=3.0.12-r1
+# RUN apk update &&\
+#     apk upgrade &&\
+#     apk add libcrypto3=3.0.12-r1 libssl3=3.0.12-r1
 
 ENV PATH "/usr/local/ssl/bin:${PATH}"
 RUN openssl fipsinstall -out /usr/local/ssl/fipsmodule.cnf -module /usr/local/ssl/lib64/ossl-modules/fips.so -provider_name fips
